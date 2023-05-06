@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <title>Forms</title>
+  <link rel="stylesheet"  href="style.css" />  
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style>
+    label[for="TypeofPres_lec"], label[for="TypeofPres_lab"] {
+        margin-right: 20px;
+        padding: 10px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .reqfield::before {
+        content: "* ";
+        color: red;
+    }
+    span.label {
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <form action="" method="post" id="proposal2020">
+      <div id="formcol1">
+        <p>2020 Proposal Form</p>
+        <p>Speaker Info</p>
+        <ul style="list-style: none;">
+          <li>
+            <span class="label">First Name:</span>
+            <input id="fstspkr1" name="fstspkr1" type="text" class="reqfield" />
+          </li>
+          <li>
+            <span class="label">Last Name:</span>
+            <input id="lstname1" name="lstname1" type="text" class="reqfield" />
+          </li>
+          <li>
+            <span class="label">Title:</span>
+            <input id="spkrtitle1" name="spkrtitle1" type="text" maxlength="48" />
+          </li>
+          <li>
+            <span class="label">Company:</span>
+            <input id="company1" name="company1" type="text" />
+          </li>
+          <li>
+            <span class="label">Department:</span>
+            <input id="department1" name="department1" type="text" />
+          </li>
+          <li>
+            <span class="label">Address:</span>
+            <input id="address1" class="reqfield" name="address1" type="text" />
+          </li>
+        </ul>
+      </div>
+      <div id="multchoice">
+        <p>Type of Presentation</p>
+        <label for="TypeofPres_lec"><span>Lecture:</span>   <input value="1" id="TypeofPres_lec" name="p-type" type="radio" /></label>
+        <label for="TypeofPres_lab"><span>Computer Lab:</span>  <input value="2" id="TypeofPres_lab" name="p-type" type="radio" /></label>       
+        <p class="submit-button">    
+          <input type="submit" value="Submit your proposal" />
+        </p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
